@@ -1,0 +1,144 @@
+/*PUBLICIDAD CLINICA*/
+.clinica{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0px;
+    @include animacionCardTips();
+}
+
+.clinica .linkClinica{
+    width: 900px;
+}
+
+.imgClinica1{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+
+.imgClinica2{
+    display: none;
+}
+
+@media (max-width:910px) {
+    .clinica .linkClinica{
+        width: 600px;
+    }
+
+    .imgClinica1{
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        aspect-ratio: 16/9;
+    }
+}
+
+@media (max-width:610px) {
+    .clinica .linkClinica{
+        width: 400px;
+    }
+
+    .imgClinica1{
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+        aspect-ratio: 16/9;
+    }
+}
+
+@media (max-width:410px) {
+    .clinica .linkClinica{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .imgClinica1{
+        display: none;
+    }
+
+    .imgClinica2{
+        display: block;
+        padding: 10px;
+        width: 250px;
+        height: 90px;
+        aspect-ratio: 16/9;
+        background-color: #18466d;
+    }
+}
+
+/*PUBLICIDAD PELUQUERIA*/
+.peluqueria{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0px;
+    @include animacionCardTips();
+}
+
+.peluqueria .linkPeluqueria{
+    width: 950px;
+}
+
+.imgPeluqueria1{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+
+.imgPeluqueria2{
+    display: none;
+}
+
+@media (max-width:960px) {
+    .peluqueria .linkPeluqueria{
+        width: 600px;
+    }
+
+    .imgPeluqueria1{
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        aspect-ratio: 16/9;
+    }
+}
+
+@media (max-width:610px) {
+    .peluqueria .linkPeluqueria{
+        width: 400px;
+    }
+
+    .imgPeluqueria1{
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+        aspect-ratio: 16/9;
+    }
+}
+
+@media (max-width:410px) {
+    .peluqueria .linkPeluqueria{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .imgPeluqueria1{
+        display: none;
+    }
+
+    .imgPeluqueria2{
+        display: block;
+        padding: 10px;
+        width: 250px;
+        height: 120px;
+        aspect-ratio: 16/9;
+    }
+}

@@ -1,0 +1,1115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    translate: 0 100px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+/*HEADER*/
+header {
+  width: 100%;
+  background-color: #27304d;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkLogo {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.logoPrincipal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.logoPrincipal img {
+  width: 40px;
+  height: 40px;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 5px;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+
+.link:active, .link:hover {
+  background-color: #354573;
+}
+
+.iniciarSesion {
+  background: #c51142;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-shadow: none;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+
+.iniciarSesion:hover {
+  background: #e2205a;
+}
+
+.toggleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.checkHamburguesa {
+  display: none;
+}
+
+.hamburguesa {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 950px) {
+  .linkLogo {
+    font-size: 18px;
+  }
+  .logoPrincipal img {
+    width: 30px;
+    height: 30px;
+  }
+  .navLink {
+    gap: 1rem;
+  }
+  .link {
+    font-size: 14px;
+  }
+  .iniciarSesion {
+    font-size: 14px;
+  }
+}
+@media (max-width: 800px) {
+  .toggleBtn {
+    display: block;
+  }
+  .navLink {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #354573;
+    top: 60px;
+    padding: 10px 5px;
+    left: -100%;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .link {
+    display: block;
+    font-size: 18px;
+    margin: 5px 0;
+    line-height: 30px;
+  }
+  .link:active, .link:hover {
+    background-color: #27304d;
+  }
+  .iniciarSesion {
+    font-size: 18px;
+  }
+  #menuBar:checked ~ .navLink {
+    left: 0;
+    transition-property: left;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0, 0, 1, 1);
+  }
+}
+/*CARROUSEL*/
+.veterinariaCarousel {
+  height: 250px;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  filter: brightness(0.6);
+}
+
+.containerImg {
+  position: relative;
+}
+
+.textCarrusel {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 90%;
+  color: #fff;
+}
+
+.textCarrusel .tituloCarrusel {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btnCarrusel1 {
+  background-color: #27304d;
+  color: #fff;
+  padding: 10px;
+  font-weight: bolder;
+  font-size: 0.8rem;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+
+.btnCarrusel1:hover {
+  background-color: #354573;
+  color: #fff;
+}
+
+.btnCarrusel2 {
+  background-color: #c51142;
+  color: #fff;
+  padding: 10px;
+  font-weight: bolder;
+  font-size: 0.8rem;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+
+.btnCarrusel2:hover {
+  background-color: #e2205a;
+  color: #fff;
+}
+
+.btnCarrusel3 {
+  background-color: #025951;
+  color: #fff;
+  padding: 10px;
+  font-weight: bolder;
+  font-size: 0.8rem;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+
+.btnCarrusel3:hover {
+  background-color: #007469;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .veterinariaCarousel {
+    height: 450px;
+  }
+  .textCarrusel {
+    width: 80%;
+  }
+  .textCarrusel .tituloCarrusel {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  .btnCarrusel1 {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  .btnCarrusel2 {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  .btnCarrusel3 {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .veterinariaCarousel {
+    height: 600px;
+  }
+  .textCarrusel {
+    width: 70%;
+  }
+  .textCarrusel .tituloCarrusel {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  .btnCarrusel1 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  .btnCarrusel2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  .btnCarrusel3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+}
+/* SERVICIOS*/
+.servicios {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+
+.servicios .serviciosTitulo {
+  margin-bottom: 10px;
+}
+
+.serviciosTitulo h1 {
+  text-align: center;
+  text-transform: uppercase;
+  animation: reveal both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+.servicios .contenedorServicios {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 1100px;
+}
+
+.contenedorServicios .cardServicio {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  width: 250px;
+  height: 350px;
+  padding: 10px;
+  margin: 15px 10px;
+  animation: reveal both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+.cardServicio img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.cardServicio h5 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.cardServicio p {
+  text-align: center;
+  font-size: 1rem;
+}
+
+@media (max-width: 1100px) {
+  .servicios .contenedorServicios {
+    width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  .contenedorServicios .cardServicio {
+    width: 200px;
+    height: 300px;
+    margin: 10px 5px;
+  }
+  .cardServicio img {
+    width: 100px;
+    height: 100px;
+  }
+  .cardServicio h5 {
+    font-size: 1rem;
+  }
+  .cardServicio p {
+    font-size: 0.8rem;
+  }
+}
+/* NUESTRAS MARCAS */
+.nuestrasMarcas {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nuestrasMarcas .marcaTitulo {
+  margin-bottom: 10px;
+}
+
+.nuestrasMarcas .marcaTitulo h3 {
+  text-transform: uppercase;
+  animation: reveal both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+.nuestrasMarcas .marcas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nuestrasMarcas .marcas .contenedorLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 175px;
+  height: 100px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 10px 10px;
+  box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
+  animation: reveal both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+.nuestrasMarcas .marcas .contenedorLogo .logoRoyalCanin {
+  width: 175px;
+  height: 100px;
+  aspect-ratio: 1.75;
+}
+
+.nuestrasMarcas .marcas .contenedorLogo .logoPurina {
+  width: 175px;
+  height: 100px;
+  aspect-ratio: 1.75;
+}
+
+.nuestrasMarcas .marcas .contenedorLogo .logoNexgard {
+  width: 175px;
+  height: 100px;
+  aspect-ratio: 1.75;
+}
+
+.nuestrasMarcas .marcas .contenedorLogo .logoBravexto {
+  width: 175px;
+  height: 100px;
+  aspect-ratio: 1.75;
+}
+
+.nuestrasMarcas .marcas .contenedorLogo .logoPurinaProPlan {
+  width: 130px;
+  height: 55px;
+  aspect-ratio: 2.3636;
+}
+
+.nuestrasMarcas .marcas .contenedorLogo .logoWhiskas {
+  width: 120px;
+  height: 100px;
+  aspect-ratio: 1.2;
+}
+
+@media (max-width: 630px) {
+  .nuestrasMarcas .marcas .contenedorLogo {
+    width: 150px;
+    height: 75px;
+  }
+  .nuestrasMarcas .marcas .contenedorLogo .logoRoyalCanin {
+    width: 150px;
+    height: 75px;
+  }
+  .nuestrasMarcas .marcas .contenedorLogo .logoPurina {
+    width: 150px;
+    height: 75px;
+  }
+  .nuestrasMarcas .marcas .contenedorLogo .logoNexgard {
+    width: 150px;
+    height: 75px;
+  }
+  .nuestrasMarcas .marcas .contenedorLogo .logoBravexto {
+    width: 150px;
+    height: 75px;
+  }
+  .nuestrasMarcas .marcas .contenedorLogo .logoPurinaProPlan {
+    width: 105px;
+    height: 30px;
+  }
+  .nuestrasMarcas .marcas .contenedorLogo .logoWhiskas {
+    width: 95px;
+    height: 80px;
+  }
+}
+@media (max-width: 380px) {
+  .nuestrasMarcas .marcas .contenedorLogo {
+    width: 90px;
+    height: 55px;
+    border-radius: 15px;
+  }
+  .nuestrasMarcas .marcas .contenedorLogo .logoRoyalCanin {
+    width: 90px;
+    height: 55px;
+  }
+  .nuestrasMarcas .marcas .contenedorLogo .logoPurina {
+    width: 90px;
+    height: 55px;
+  }
+  .nuestrasMarcas .marcas .contenedorLogo .logoNexgard {
+    width: 90px;
+    height: 55px;
+  }
+  .nuestrasMarcas .marcas .contenedorLogo .logoBravexto {
+    width: 90px;
+    height: 55px;
+  }
+  .nuestrasMarcas .marcas .contenedorLogo .logoPurinaProPlan {
+    width: 70px;
+    height: 30px;
+  }
+  .nuestrasMarcas .marcas .contenedorLogo .logoWhiskas {
+    width: 65px;
+    height: 55px;
+  }
+}
+/* TIPS */
+.tips {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+
+.tips h2 {
+  text-transform: uppercase;
+  animation: reveal both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+.tips .cardTips {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cardTips .tipD {
+  width: 700px;
+  height: 300px;
+  margin: 20px 10px;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
+  animation: reveal both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+.tipD .imageMascota {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.tipD .imageMascota img {
+  width: 250px;
+  height: auto;
+  margin: 0px 20px 0px 0px;
+}
+
+.tipD .descripcionD {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tipD .descripcionD h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.tipD .descripcionD p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.cardTips .tipI {
+  width: 700px;
+  height: 300px;
+  margin: 20px 10px;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: row-reverse;
+  background-color: #fff;
+  box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
+  animation: reveal both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+.tipI .imageMascota {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.tipI .imageMascota img {
+  width: 200px;
+  height: auto;
+  margin: 0px 0px 0px 20px;
+}
+
+.tipI .descripcionI {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tipI .descripcionI h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.tipI .descripcionI p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .cardTips .tipD {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+  }
+  .tipD .imageMascota {
+    width: 100%;
+  }
+  .tipD .imageMascota img {
+    width: 150px;
+    margin: 0;
+  }
+  .tipD .descripcionD h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  .tipD .descripcionD p {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  .cardTips .tipI {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+  }
+  .tipI .imageMascota {
+    width: 100%;
+  }
+  .tipI .imageMascota img {
+    width: 100px;
+    margin: 0;
+  }
+  .tipI .descripcionI h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  .tipI .descripcionI p {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+}
+/*PUBLICIDAD CLINICA*/
+.clinica {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0px;
+  animation: reveal both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+.clinica .linkClinica {
+  width: 900px;
+}
+
+.imgClinica1 {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+.imgClinica2 {
+  display: none;
+}
+
+@media (max-width: 910px) {
+  .clinica .linkClinica {
+    width: 600px;
+  }
+  .imgClinica1 {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+  }
+}
+@media (max-width: 610px) {
+  .clinica .linkClinica {
+    width: 400px;
+  }
+  .imgClinica1 {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+  }
+}
+@media (max-width: 410px) {
+  .clinica .linkClinica {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .imgClinica1 {
+    display: none;
+  }
+  .imgClinica2 {
+    display: block;
+    padding: 10px;
+    width: 250px;
+    height: 90px;
+    aspect-ratio: 16/9;
+    background-color: #18466d;
+  }
+}
+/*PUBLICIDAD PELUQUERIA*/
+.peluqueria {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0px;
+  animation: reveal both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+.peluqueria .linkPeluqueria {
+  width: 950px;
+}
+
+.imgPeluqueria1 {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+.imgPeluqueria2 {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .peluqueria .linkPeluqueria {
+    width: 600px;
+  }
+  .imgPeluqueria1 {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+  }
+}
+@media (max-width: 610px) {
+  .peluqueria .linkPeluqueria {
+    width: 400px;
+  }
+  .imgPeluqueria1 {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+  }
+}
+@media (max-width: 410px) {
+  .peluqueria .linkPeluqueria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .imgPeluqueria1 {
+    display: none;
+  }
+  .imgPeluqueria2 {
+    display: block;
+    padding: 10px;
+    width: 250px;
+    height: 120px;
+    aspect-ratio: 16/9;
+  }
+}
+/* CONTACTO */
+.contacto {
+  width: 100%;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacto .contactoTitulo {
+  margin-bottom: 10px;
+}
+
+.contacto .contactoTitulo h3 {
+  text-transform: uppercase;
+  animation: reveal both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+.contactoDescripcion {
+  width: 100%;
+  display: grid;
+  grid-template-areas: "mapa formulario";
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  animation: reveal both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+.mapaGoogle {
+  grid-area: mapa;
+  width: 100%;
+}
+
+.formularioContacto {
+  grid-area: formulario;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.btnPersonalized1 {
+  background-color: #27304d;
+  color: #fff;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+
+.btnPersonalized1:hover {
+  background-color: #354573;
+  color: #fff;
+}
+
+.btnPersonalized2 {
+  background-color: #c51142;
+  color: #fff;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+
+.btnPersonalized2:hover {
+  background-color: #e2205a;
+  color: #fff;
+}
+
+.btnPersonalized3 {
+  background-color: #025951;
+  color: #fff;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+
+.btnPersonalized3:hover {
+  background-color: #007469;
+  color: #fff;
+}
+
+.bgInput {
+  border: 1.8px solid #354573;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+
+.bgInput:focus {
+  border: 2px solid #354573;
+  box-shadow: 0 0 0 0.2rem #354573;
+}
+
+@media (max-width: 800px) {
+  .contactoDescripcion {
+    grid-template-areas: "mapa" "formulario";
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    margin-top: 25px;
+  }
+  .mapaGoogle {
+    grid-area: mapa;
+    width: 100%;
+  }
+}
+/* FOOTER */
+footer {
+  width: 100%;
+}
+
+footer .FSection1 {
+  width: 100%;
+  background-color: #27304d;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.FSection1 .box-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.FSection1 .box-logo a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.FSection1 .box-logo a div {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
+}
+
+.FSection1 .box-logo a div img {
+  width: 50px;
+  height: 50px;
+  aspect-ratio: 16/9;
+}
+
+.FSection1 .box-logo a p {
+  padding: 0;
+  margin: 0 0 0 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.FSection1 .boxNosotros {
+  width: 500px;
+  display: flex;
+  align-items: self-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.FSection1 .boxNosotros h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.FSection1 .boxNosotros p {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.FSection1 .boxRedes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.FSection1 .boxRedes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #f2f6fc;
+  color: #27304d;
+  margin: 7.5px;
+  padding: 9px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+
+.FSection1 .boxRedes a:hover {
+  background-color: #c51142;
+  color: #fff;
+  transition: 0.2s linear;
+}
+
+.FSection1 .boxRedes a i {
+  font-size: 1.5rem;
+}
+
+footer .FSection2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  background-color: #c51142;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  footer .FSection1 {
+    flex-direction: column;
+  }
+  .FSection1 .box-logo {
+    margin: 10px;
+  }
+  .FSection1 .boxNosotros {
+    width: auto;
+    margin: 10px;
+    padding: 0;
+    align-items: center;
+  }
+  .FSection1 .boxNosotros p {
+    text-align: center;
+  }
+}
+@media (max-width: 400px) {
+  footer .FSection1 {
+    padding: 10px;
+  }
+  .FSection1 .box-logo a div img {
+    width: 35px;
+    height: 35px;
+  }
+  .FSection1 .box-logo a p {
+    font-size: 0.8rem;
+  }
+  .FSection1 .boxNosotros h3 {
+    font-size: 1rem;
+  }
+  .FSection1 .boxNosotros p {
+    font-size: 0.8rem;
+  }
+  .FSection1 .boxRedes a i {
+    font-size: 1rem;
+  }
+  footer .FSection2 {
+    font-size: 0.8rem;
+  }
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  margin-top: 70px;
+  background-color: #f2f6fc;
+  flex: 1;
+}
+
+@media (max-width: 950px) {
+  main {
+    margin-top: 61px;
+  }
+}
+@media (max-width: 800px) {
+  main {
+    margin-top: 60px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

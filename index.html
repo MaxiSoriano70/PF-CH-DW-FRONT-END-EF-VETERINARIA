@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clinica veterinaria">
+    <meta name="keywords" content="Veterinaria, Clinica veterinaria, Veterinario, Centro de mascotas, Cuidado de mascotas">
+    <meta property="og:title" content="Veterinaria">
+    <meta property="og:description" content="Clinica veterinaria para el cuidado de tus mascotas.">
+    <meta property="og:img" content="./img/Logo.png">
+    <meta property="og:url" content="https://ch-veterinaria-sass.netlify.app/">
+    <link rel="icon" href="./img/Logo.png" type="image/png">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Veterinaria</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="./index.html" class="linkLogo">
+                    <div class="logoPrincipal">
+                        <img src="./img/Logo.png" alt="logo">
+                    </div>
+                    Veterinaria
+                </a>
+            </div>
+            <input class="checkHamburguesa" type="checkbox" id="menuBar">
+            <ul class="navLink">
+                <li><a href="./index.html" class="link"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#Servicios" class="link"><i class="fa-solid fa-shield-dog"></i> Servicios</a></li>
+                <li><a href="#Tips" class="link"><i class="fa-solid fa-circle-info"></i> Tips</a></li>
+                <li><a href="#Contacto" class="link"><i class="fa-solid fa-address-book"></i> Contacto</a></li>
+                <button href="#" class="iniciarSesion">Iniciar Sesion</button>
+            </ul>
+            <div class="toggleBtn">
+                <label class="hamburguesa" for="menuBar">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- CAROUSEL -->
+        <article id="carouselVeterinaria" class="carousel slide carousel-fade">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselVeterinaria" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselVeterinaria" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselVeterinaria" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active containerImg">
+                    <img src="./img/banner-1.jpeg" class="d-block w-100 veterinariaCarousel" alt="banner-1" />
+                    <div class="d-flex align-items-center justify-content-center flex-column textCarrusel">
+                    <h2 class="tituloCarrusel">
+                        Bienvenido a la Veterinaria, Nos apasiona cuidar y proteger a tus mascotas como si fueran parte de nuestra familia. Ofrecemos servicios completos de salud y bienestar, brindando atención personalizada para cada peludo amigo.
+                    </h2>
+                    <button id="boton-registrarse" class="btn btnCarrusel1" aria-label="Registarse" data-bs-toggle="modal"
+                        data-bs-target="#registrarseModal">
+                        Registrate
+                    </button>
+                    </div>
+                </div>
+                <div class="carousel-item containerImg">
+                    <img src="./img/banner-2.jpeg" class="d-block w-100 veterinariaCarousel" alt="banner-2" />
+                    <div class="d-flex align-items-center justify-content-center flex-column textCarrusel">
+                    <h2 class="tituloCarrusel">
+                        Cuidamos la salud y el bienestar de tus mascotas con servicios completos: desde consultas y emergencias, hasta vacunación, desparasitación y procedimientos quirúrgicos. También ofrecemos peluquería y asesoría nutricional personalizada para que tu mascota esté siempre saludable y feliz.
+                    </h2>
+                    <a href="#" class="btn btnCarrusel2" aria-label="#"><i class="fa-solid fa-shield-dog"></i> Servicios</a>
+                    </div>
+                </div>
+                <div class="carousel-item containerImg">
+                    <img src="./img/banner-3.jpeg" class="d-block w-100 veterinariaCarousel" alt="banner-3" />
+                    <div class="d-flex align-items-center justify-content-center flex-column textCarrusel">
+                    <h2 class="tituloCarrusel">
+                        Nuestra clínica está ubicada en Calle falsa 123, fácilmente accesible y cercana a estacionamientos y transporte público. Puedes comunicarte con nosotros por telefono o escribirnos a nuestro correo. También respondemos consultas a través de WhatsApp en el mismo número. ¡Estamos siempre listos para ayudarte y cuidar de tu mascota!.
+                    </h2>
+                    <a href="#" class="btn btnCarrusel3" aria-label="#"><i class="fa-solid fa-address-book"></i> Contacto</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselVeterinaria" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselVeterinaria" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </article>
+
+        <!-- SERVICIOS -->
+        <article id="Servicios" class="servicios">
+            <section class="serviciosTitulo">
+                <h1>Servicios</h1>
+            </section>
+            <section class="contenedorServicios">
+                <div class="cardServicio">
+                    <img src="./img/consultorio-veterinario.svg" alt="Consultorio Veterinario"/>
+                    <h5>Consultorio Veterinario</h5>
+                    <p>Espacio dedicado al cuidado de mascotas, ofreciendo consultas, diagnósticos y tratamientos veterinarios para su bienestar.</p>
+                </div>
+                <div class="cardServicio">
+                    <img src="./img/internacion-diurna.svg" alt="Internación Diurna"/>
+                    <h5>Internación Diurna</h5>
+                    <p>Servicio de cuidado veterinario durante el día, con monitoreo y atención médica especializada para mascotas.</p>
+                </div>
+                <div class="cardServicio">
+                    <img src="./img/laboratorio.svg" alt="Laboratorio Propio"/>
+                    <h5>Laboratorio Propio</h5>
+                    <p>Laboratorio veterinario interno para realizar análisis y diagnósticos precisos en el mismo consultorio.</p>
+                </div>
+                <div class="cardServicio">
+                    <img src="./img/radiografias.svg" alt="Radiografías y Ecografías"/>
+                    <h5>Radiografías y Ecografías</h5>
+                    <p>Servicio de radiografías y ecografías para diagnósticos veterinarios rápidos y precisos.</p>
+                </div>
+                <div class="cardServicio">
+                    <img src="./img/cirugias.svg" alt="Cirugias"/>
+                    <h5>Cirugias</h5>
+                    <p>Realización de cirugías veterinarias con equipos modernos y cuidados especializados para la recuperación de las mascotas.</p>
+                </div>
+                <div class="cardServicio">
+                    <img src="./img/colocacion-microchips.svg" alt="Colocación de Microchip"/>
+                    <h5>Colocación de Microchip</h5>
+                    <p>Servicio de implantación de microchip para identificación segura y permanente de mascotas.</p>
+                </div>
+                <div class="cardServicio">
+                    <img src="./img/guardia-veterinaria.svg" alt="Guardia Veterinaria"/>
+                    <h5>Guardia Veterinaria</h5>
+                    <p>Atención veterinaria de urgencias disponible las 24 horas para casos imprevistos.</p>
+                </div>
+                <div class="cardServicio">
+                    <img src="./img/otras-especialidades.svg" alt="Otras Especialidades"/>
+                    <h5>Otras Especialidades</h5>
+                    <p>Consultas especializadas en diversas áreas veterinarias para el cuidado integral de las mascotas.</p>
+                </div>
+            </section>
+        </article>
+
+        <!-- NUESTRAS MARCAS -->
+        <article class="nuestrasMarcas">
+            <section class="marcaTitulo">
+                <h3>Nuestras marcas</h3>
+            </section>
+            <section class="marcas">
+                <div class="contenedorLogo">
+                    <img class="logoRoyalCanin" src="./img/marca-1.png" alt="royal-canin">
+                </div>
+                <div class="contenedorLogo">
+                    <img class="logoPurina" src="./img/marca-2.png" alt="purina">
+                </div>
+                <div class="contenedorLogo">
+                    <img class="logoNexgard" src="./img/marca-3.png" alt="nexgard">
+                </div>
+                <div class="contenedorLogo">
+                    <img class="logoBravexto" src="./img/marca-4.png" alt="bravexto">
+                </div>
+                <div class="contenedorLogo">
+                    <img class="logoPurinaProPlan" src="./img/marca-5.png" alt="purina-pro-plan">
+                </div>
+                <div class="contenedorLogo">
+                    <img class="logoWhiskas" src="./img/marca-6.png" alt="whiskas">
+                </div>
+            </section>
+        </article>
+
+        <!-- PUBLICIDAD CLINICA -->
+        <article class="clinica">
+            <a class="linkClinica" href="#" target="_blank" aria-label="Clinica Veterinaria">
+                <img class="imgClinica1" src="img/clinica-1.jpg" alt="clinica-veterinaria-1">
+                <img class="imgClinica2" src="img/clinica-2.jpg" alt="clinica-veterinaria-2">
+            </a>
+        </article>
+
+        <!-- TIPS -->
+        <article id="Tips" class="tips">
+            <h2>Cuidá a tu mascota</h2>
+            <section class="cardTips">
+                <div class="tipD">
+                    <figure class="imageMascota">
+                        <img src="img/tip-alimentacion.png" alt="img-alimentacion">
+                    </figure>
+                    <div class="descripcionD">
+                        <h3>Alimentación</h3>
+                        <p>La alimentación de tus perros y gatos debe ser a base de alimentos balanceados acorde a las necesidades de los mismos ó en su defecto lo msa variada posible. (Consultá siempre a tu veterinario de confianza).</p>
+                    </div>
+                </div>
+
+                <div class="tipI">
+                    <figure class="imageMascota">
+                        <img src="img/tip-higiene.jpg" alt="img-higiene">
+                    </figure>
+                    <div class="descripcionI">
+                        <h3>Higiene</h3>
+                        <p>A los perros hay que bañarlos con agua y jabón máximo 1 vez cada 15 días y mínimo 1 vez al mes. los gatos se limpian solos.</p>
+                    </div>
+                </div>
+
+                <div class="tipD">
+                    <figure class="imageMascota">
+                        <img src="img/tip-identificacion.jpg" alt="img-identificacion">
+                    </figure>
+                    <div class="descripcionD">
+                        <h3>Identificación</h3>
+                        <p>Asegurate de que siempre lleve puesto un collar con una placa identificativa con tu número de teléfono. Está demostrado que los perros que llevan una placa en el collar con nombre y teléfono vuelven más rápido a sus hogares ya que la gente es más propensa a ayudarlos si creen que tienen dueño.</p>
+                    </div>
+                </div>
+
+                <div class="tipI">
+                    <figure class="imageMascota">
+                        <img src="img/tip-atencion.jpg" alt="img-atencion">
+                    </figure>
+                    <div class="descripcionI">
+                        <h3>Atención Veterinaria</h3>
+                        <p>Desparasitá a tu mascota cada 6 meses, recordá que algunos parásitos pueden transmitirse al hombre. Si están molestos, si se la pasan durmiendo o no quieren comer llevalos a un veterinario. No hay que darles remedios sin ver a un doctor.</p>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <!-- PUBLICIDAD PELUQUERIA -->
+        <article class="peluqueria">
+            <a class="linkPeluqueria" href="#" target="_blank" aria-label="Peluqueria de mascotas">
+                <img class="imgPeluqueria1" src="img/peluqueria-1.jpg" alt="peluqueria-1">
+                <img class="imgPeluqueria2" src="img/peluqueria-2.jpg" alt="peluqueria-2">
+            </a>
+        </article>
+
+        <!-- CONTACTO -->
+        <article id="Contacto" class="contacto">
+            <section class="contactoTitulo">
+                <h3>Contacto</h3>
+            </section>
+            <section class="contactoDescripcion">
+                <iframe class="mapaGoogle" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d905.4866189961241!2d-65.40441160860235!3d-24.797301614782796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc3697d4ac8eb%3A0x39c35341c85af917!2sHospital%20P%C3%BAblico%20de%20Mascotas!5e0!3m2!1ses-419!2sar!4v1730962398361!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <form class="formularioContacto">
+                    <div class="mb-3">
+                        <label for="fotoMascota" class="form-label fw-bolder">Email</label>
+                        <input class="form-control bgInput" type="email" id="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label fw-bolder">Nombre</label>
+                        <input type="text" class="form-control bgInput" id="nombre" placeholder="Ingrese el nombre"
+                        minlength="3" maxlength="25" required>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <textarea class="form-control bgInput" placeholder="Ingrese mensaje" id="mensaje" style="height: 100px"></textarea>
+                            <label for="mensaje">Mensaje</label>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <button type="submit" class="btn btnPersonalized3 mx-1 fw-bold" aria-label="Agregar">Agregar</button>
+                        <button type="reset" class="btn btnPersonalized2 mx-1 fw-bold" aria-label="Cancelar">Cancelar</button>
+                    </div>
+                </form>
+            </section>
+        </article>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <article class="FSection1">
+            <section class="box-logo">
+                <a href="index.html" aria-label="Logo y nombre">
+                    <div>
+                        <img src="./img/Logo.png" alt="Logo-pie-de-pagina">
+                    </div>
+                    <p>Veterinaria</p>
+                </a>
+            </section>
+            <section class="boxNosotros">
+                <h3>Sobre nosotros</h3>
+                <p>Nos dedicamos a cuidar la salud de tus mascotas con profesionalismo y cariño. Nuestro equipo ofrece un servicio veterinario de calidad, con atención personalizada para que tu compañero se sienta seguro y bien atendido. ¡Tu mascota es nuestra prioridad!</p>
+            </section>
+            <section class="boxRedes">
+                <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#" aria-label="Instragram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            </section>
+        </article>
+        <article class="FSection2">
+            <small>
+                &copy; 2024 <b>Maximiliano Soriano</b> - Todos los derechos reservados.
+            </small>
+        </article>
+    </footer>
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

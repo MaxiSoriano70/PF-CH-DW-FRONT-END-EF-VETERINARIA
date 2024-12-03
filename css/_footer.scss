@@ -1,0 +1,163 @@
+/* FOOTER */
+footer{
+    width: 100%;
+}
+
+footer .FSection1{
+    width: 100%;
+    background-color: $--color1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.FSection1 .box-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.FSection1 .box-logo a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.FSection1 .box-logo a div{
+    background-color: $--colorBlanco;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
+}
+
+.FSection1 .box-logo a div img{
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 16/9;
+}
+
+.FSection1 .box-logo a p{
+    padding: 0;
+    margin: 0 0 0 10px;
+    color: $--colorBlanco;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.FSection1 .boxNosotros{
+    width: 500px;
+    display: flex;
+    align-items: self-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.FSection1 .boxNosotros h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $--colorBlanco;
+}
+
+.FSection1 .boxNosotros p{
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    color: $--colorBlanco;
+}
+
+.FSection1 .boxRedes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.FSection1 .boxRedes a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: $--fondo;
+    color: $--color1;
+    margin: 7.5px;
+    padding: 9px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    @include animacionLink();
+}
+
+.FSection1 .boxRedes a:hover{
+    background-color: $--color3;
+    color: $--colorBlanco;
+    transition: 0.2s linear;
+}
+
+.FSection1 .boxRedes a i{
+    font-size: 1.5rem;
+}
+
+footer .FSection2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    background-color: $--color3;
+    color: $--colorBlanco;
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media (max-width:720px){
+    footer .FSection1{
+        flex-direction: column ;
+    }
+
+    .FSection1 .box-logo{
+        margin: 10px;
+    }
+
+    .FSection1 .boxNosotros{
+        width: auto;
+        margin: 10px;
+        padding: 0;
+        align-items: center;
+    }
+
+    .FSection1 .boxNosotros p{
+        text-align: center;
+    }
+}
+
+@media (max-width:400px){
+    footer .FSection1{
+        padding: 10px;
+    }
+
+    .FSection1 .box-logo a div img{
+        width: 35px;
+        height: 35px;
+    }
+
+    .FSection1 .box-logo a p{
+        font-size: 0.8rem;
+    }
+
+    .FSection1 .boxNosotros h3{
+        font-size: 1rem;
+    }
+
+    .FSection1 .boxNosotros p{
+        font-size: 0.8rem;
+    }
+
+    .FSection1 .boxRedes a i{
+        font-size: 1rem;
+    }
+
+    footer .FSection2{
+        font-size: 0.8rem;
+    }
+}

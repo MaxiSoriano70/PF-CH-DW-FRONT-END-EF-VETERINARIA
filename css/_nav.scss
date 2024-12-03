@@ -1,0 +1,173 @@
+/*HEADER*/
+header{
+    width: 100%;
+    background-color: $--color1;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkLogo{
+    text-decoration: none;
+    color: $--colorBlanco;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.logoPrincipal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $--colorBlanco;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.logoPrincipal img{
+    width: 40px;
+    height: 40px;
+}
+
+.navLink{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+}
+
+.link{
+    display: inline-block;
+    text-decoration: none;
+    color: $--colorBlanco;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
+    @include animacionLink();
+}
+
+.link:active, .link:hover{
+    background-color: $--color2;
+}
+
+.iniciarSesion {
+    background: $--color3;
+    color: $--colorBlanco;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-shadow: none;
+    @include animacionLink();
+}
+
+.iniciarSesion:hover {
+    background: $--color4;
+}
+
+.toggleBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.checkHamburguesa{
+    display: none;
+}
+
+.hamburguesa{
+    color: $--colorBlanco;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 950px){
+    .linkLogo{
+        font-size: 18px;
+    }
+
+    .logoPrincipal img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .navLink{
+        gap: 1rem;
+    }
+
+    .link{
+        font-size: 14px;
+    }
+
+    .iniciarSesion {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px){
+    .toggleBtn{
+        display: block;
+    }
+
+    .navLink{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: $--color2;
+        top: 60px;
+        padding: 10px 5px;
+        left: -100%;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link{
+        display: block;
+        font-size: 18px;
+        margin: 5px 0;
+        line-height: 30px;
+    }
+
+    .link:active, .link:hover{
+        background-color: $--color1;
+    }
+
+    .iniciarSesion {
+        font-size: 18px;
+    }
+
+    #menuBar:checked ~ .navLink{
+        left: 0;
+        @include animacionNavbar();
+    }
+}

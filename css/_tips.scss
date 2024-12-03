@@ -1,0 +1,161 @@
+/* TIPS */
+.tips{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px 0px;
+}
+
+.tips h2{
+    text-transform: uppercase;
+    @include animacionCardTips();
+}
+
+.tips .cardTips{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cardTips .tipD{
+    width: 700px;
+    height: 300px;
+    margin: 20px 10px;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    background-color: $--colorBlanco;
+    box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
+    @include animacionCardTips();
+}
+
+.tipD .imageMascota{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.tipD .imageMascota img{
+    width: 250px;
+    height: auto;
+    margin: 0px 20px 0px 0px;
+}
+
+.tipD .descripcionD{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tipD .descripcionD h3{
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.tipD .descripcionD p{
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.cardTips .tipI{
+    width: 700px;
+    height: 300px;
+    margin: 20px 10px;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: row-reverse;
+    background-color: $--colorBlanco;
+    box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
+    @include animacionCardTips();
+}
+
+.tipI .imageMascota{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.tipI .imageMascota img{
+    width: 200px;
+    height: auto;
+    margin: 0px 0px 0px 20px;
+}
+
+.tipI .descripcionI{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tipI .descripcionI h3{
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.tipI .descripcionI p{
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+@media (max-width:700px) {
+    .cardTips .tipD{
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .tipD .imageMascota{
+        width: 100%;
+    }
+
+    .tipD .imageMascota img{
+        width: 150px;
+        margin: 0;
+    }
+
+    .tipD .descripcionD h3{
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .tipD .descripcionD p{
+        font-size: 0.8rem;
+        margin: 0;
+    }
+
+    .cardTips .tipI{
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .tipI .imageMascota{
+        width: 100%;
+    }
+
+    .tipI .imageMascota img{
+        width: 100px;
+        margin: 0;
+    }
+
+    .tipI .descripcionI h3{
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .tipI .descripcionI p{
+        font-size: 0.8rem;
+        margin: 0;
+    }
+}

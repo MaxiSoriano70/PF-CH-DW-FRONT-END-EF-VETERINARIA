@@ -1,0 +1,35 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+@import 'nav';
+@import 'carrousel';
+@import 'servicios';
+@import 'nuestrasMarcas';
+@import 'tips';
+@import 'publi';
+@import 'contacto';
+@import 'footer';
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    margin-top: 70px;
+    background-color: $--fondo;
+    flex: 1;
+}
+
+@media (max-width: 950px){
+    main{
+        margin-top: 61px;
+    }
+}
+
+@media (max-width: 800px){
+    main{
+        margin-top: 60px;
+    }
+}
