@@ -50,7 +50,7 @@ Este proyecto fue creado para practicar:
 ## 📜 Créditos
 
 Desarrollado por **Maximiliano Soriano** 🧑‍💻  
-Como parte de una **Coder House | Desarrollo Web**.
+Como parte de **Coder House | Desarrollo Web**.
 
 ---
 
